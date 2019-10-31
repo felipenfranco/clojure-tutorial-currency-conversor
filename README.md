@@ -1,44 +1,20 @@
 # currency-converter
 
-FIXME: description
+CLI tool made in Clojure to get the current conversion rate between two currencies.
+Uses https://free.currencyconverterapi.com/ to fetch the currency rates.
 
-## Installation
-
-Download from http://example.com/FIXME.
+## Instalation
+You need clojure and leiningen installed to run this project
 
 ## Usage
 
-FIXME: explanation
+First you need an API KEY to access the API.
+You can get one for free at: https://free.currencyconverterapi.com/free-api-key
 
-    $ java -jar currency-converter-0.1.0-standalone.jar [args]
+With the API KEY at hand, usage is very simple.
 
-## Options
+On the root of the project:
 
-FIXME: listing of options this app accepts.
+    >$ API_KEY=<enter your key here> lein run --from=USD --to=BRL
 
-## Examples
-
-...
-
-### Bugs
-
-...
-
-### Any Other Sections
-### That You Think
-### Might be Useful
-
-## License
-
-Copyright © 2019 FIXME
-
-This program and the accompanying materials are made available under the
-terms of the Eclipse Public License 2.0 which is available at
-http://www.eclipse.org/legal/epl-2.0.
-
-This Source Code may also be made available under the following Secondary
-Licenses when the conditions for such availability set forth in the Eclipse
-Public License, v. 2.0 are satisfied: GNU General Public License as published by
-the Free Software Foundation, either version 2 of the License, or (at your
-option) any later version, with the GNU Classpath Exception which is available
-at https://www.gnu.org/software/classpath/license.html.
+This will give you the factor you need to multiply the amount in USD to get the respective amount in BRL.
